@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo de cultura popular Massapê</title>
-    <link rel="stylesheet" href="index.css">
-    <meta name="description" content="Site do Grupo de cultura popular Massapê">
-    <meta name="keywords" content="Massapê, cultura popular, grupo, folclore">
-    <meta name="author" content="Glaucio de França Vaz">
-    <link rel="icon" href="imagens/favicon.png" type="image/png">
+    <title>Músicas</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #145a32 0%, #82e0aa 100%);
+            background-size: cover;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .gallery audio {
+            width: 320px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Músicas</h1>
+    <p>Bem-vindo à página de músicas do Grupo de cultura popular Massapê. Aqui você encontrará uma coleção de músicas de nossos eventos e atividades.</p>
+    <div class="gallery">
+        <audio controls>
+            <source src="musicas/musica1.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <audio controls>
+            <source src="musicas/musica2.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <audio controls>
+            <source src="musicas/musica3.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <audio controls>
+            <source src="musicas/musica4.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+</body>
+</html>

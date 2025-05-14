@@ -1,0 +1,45 @@
+.menu-btn {
+    background: #229954;
+    border: none;
+    border-radius: 16px;
+    padding: 39px 54.6px;
+    color: #fff;
+    font-size: 2.145rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+    min-width: 234px;
+    min-height: 234px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; /* Remove sublinhado de links */
+}
+
+.menu-btn:hover, .menu-btn:focus {
+    transform: scale(1.07) rotate(-2deg);
+    background: #27ae60;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+
+.menu-btn video, .menu-btn img {
+    width: 93.6px;
+    height: 93.6px;
+    margin-bottom: 19.5px;
+    border-radius: 10.4px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    background: #fff;
+}
+
+.menu-btn span {
+    margin-top: 10.4px;
+    font-size: 1.95rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px #145a32;
+    text-decoration: none;
+}

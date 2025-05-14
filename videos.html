@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupo de cultura popular Massapê</title>
-    <link rel="stylesheet" href="index.css">
-    <meta name="description" content="Site do Grupo de cultura popular Massapê">
-    <meta name="keywords" content="Massapê, cultura popular, grupo, folclore">
-    <meta name="author" content="Glaucio de França Vaz">
-    <link rel="icon" href="imagens/favicon.png" type="image/png">
+    <title>Vídeos</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #145a32 0%, #82e0aa 100%);
+            background-size: cover;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .gallery video {
+            width: 320px;
+            height: 180px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vídeos</h1>
+    <p>Bem-vindo à página de vídeos do Grupo de cultura popular Massapê. Aqui você encontrará uma coleção de vídeos de nossos eventos e atividades.</p>
+    <div class="gallery">
+        <video controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <video controls>
+            <source src="videos/video2.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <video controls>
+            <source src="videos/video3.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <video controls>
+            <source src="videos/video4.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+</body>
+</html>

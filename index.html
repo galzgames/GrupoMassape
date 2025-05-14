@@ -38,9 +38,9 @@
         background: #229954;
         border: none;
         border-radius: 16px;
-        padding: 39px 54.6px; /* 30% maior que antes */
+        padding: 39px 54.6px;
         color: #fff;
-        font-size: 2.145rem; /* 30% maior que antes */
+        font-size: 1.0725rem; /* Reduzido em 50% */
         font-weight: bold;
         cursor: pointer;
         box-shadow: 0 4px 16px rgba(0,0,0,0.15);
@@ -49,10 +49,16 @@
         align-items: center;
         transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
         outline: none;
-        min-width: 234px;   /* 30% maior que antes */
-        min-height: 234px;  /* 30% maior que antes */
+        min-width: 234px;
+        min-height: 234px;
+        max-width: 234px;    /* Adicione esta linha */
+        max-height: 234px;   /* Adicione esta linha */
         position: relative;
         overflow: hidden;
+        text-decoration: none;
+        box-sizing: border-box; /* Garante que padding não aumente o tamanho */
+        white-space: normal;    /* Permite quebra de linha no texto */
+        word-break: break-word; /* Quebra palavras longas */
     }
     .menu-btn:hover, .menu-btn:focus {
         transform: scale(1.07) rotate(-2deg);
@@ -60,7 +66,7 @@
         box-shadow: 0 8px 24px rgba(0,0,0,0.22);
     }
     .menu-btn video, .menu-btn img {
-        width: 93.6px;   /* 30% maior que antes */
+        width: 93.6px;
         height: 93.6px;
         margin-bottom: 19.5px;
         border-radius: 10.4px;
@@ -70,7 +76,7 @@
     }
     .menu-btn span {
         margin-top: 10.4px;
-        font-size: 1.95rem; /* 30% maior que antes */
+        font-size: 0.975rem; /* Reduzido em 50% */
         color: #fff;
         text-shadow: 1px 1px 2px #145a32;
     }
@@ -88,32 +94,34 @@
         background: #fff;
     }
 </style>
+
 <body>
+    
     <h1>Grupo de cultura popular Massapê</h1>
     <p>Bem-vindo ao site do Grupo de cultura popular Massapê. Aqui você encontrará informações sobre nosso trabalho, eventos e muito mais.</p>
+    
+    
     <div class="menu">
-        
-          <button class="menu-btn" onclick="window.location.href='#historico'">
+        <a class="menu-btn" href="historico.html">
             <video src="videos/historico.mp4" autoplay loop muted playsinline></video>
-            <span>Histórico</span>
-        </button>
-        <button class="menu-btn" onclick="window.location.href='#fotos'">
+            <span>Fundação e Histórico</span>
+        </a>
+        <button class="menu-btn" onclick="window.location.href='fotos.html'">
             <video src="videos/fotos.mp4" autoplay loop muted playsinline></video>
             <span>Fotos</span>
         </button>
-        <button class="menu-btn" onclick="window.location.href='#musicas'">
+        <button class="menu-btn" onclick="window.location.href='musicas.html'">
             <video src="videos/musicas.mp4" autoplay loop muted playsinline></video>
             <span>Músicas</span>
         </button>
-        <button class="menu-btn" onclick="window.location.href='#videos'">
+        <button class="menu-btn" onclick="window.location.href='videos.html'">
             <video src="videos/videos.mp4" autoplay loop muted playsinline></video>
             <span>Vídeos</span>
         </button>
-      
     </div>
 
     <footer style="margin-top: 60px;">
-        <div class="footer-social" style="display: flex; justify-content: center; gap: 24px; align-items: center;">
+        <div class="footer-social" style="display: flex; justify-content: center; gap: 12px; align-items: center;">
             <a href="https://facebook.com/" target="_blank" title="Facebook">
                 <img src="logos/face.png" alt="Facebook">
             </a>
