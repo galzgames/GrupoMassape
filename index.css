@@ -52,13 +52,9 @@ body {
 
 h1 {
     text-transform: uppercase;
-    color: #000;
-    text-shadow:
-        -2px -2px 0 #fff,
-         2px -2px 0 #fff,
-        -2px  2px 0 #fff,
-         2px  2px 0 #fff,
-         0px  0px 8px #fff;
+    color: #145a32;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+    /* ou remova completamente o text-shadow para máxima nitidez */
 }
 
 .menu {
@@ -133,4 +129,56 @@ h1 {
     transform: scale(1.25) rotate(-8deg);
     box-shadow: 0 6px 24px rgba(34,153,84,0.25);
     background: #fff;
+}
+
+.titulo-animado {
+    color: #111;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 32px 0 18px 0;
+    text-align: center;
+    /* Removido text-shadow para não ter sombra */
+}
+
+@keyframes brilho-titulo {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 700px) {
+    .menu {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .menu-btn {
+        min-width: 90vw;
+        max-width: 95vw;
+        min-height: 120px;
+        max-height: none;
+        padding: 18px 0;
+        font-size: 1.1rem;
+    }
+    .menu-btn video, .menu-btn img {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 10px;
+    }
+    .menu-btn span {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .footer-social a img {
+        width: 32px;
+        height: 32px;
+    }
 }
