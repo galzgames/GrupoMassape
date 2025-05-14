@@ -76,6 +76,20 @@
                 max-width: 90%;
             }
         }
+        .folder-img,
+        .img-right,
+        .img-left {
+            border: 2px solid #111; /* Borda preta */
+            transition: transform 0.4s cubic-bezier(.4,2,.3,1), box-shadow 0.4s;
+            cursor: pointer;
+        }
+        .folder-img:hover,
+        .img-right:hover,
+        .img-left:hover {
+            transform: scale(1.07) rotate(-2deg);
+            box-shadow: 0 8px 32px rgba(34,153,84,0.25), 0 2px 12px rgba(20,90,50,0.13);
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
