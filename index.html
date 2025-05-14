@@ -14,25 +14,25 @@
 
 <body>
     
-    <h1 class="titulo-animado">Grupo de cultura popular Massapê</h1>
+    <h1 class="titulo-animado">Grupo de Cultura Popular Massapê</h1>
     <p>Bem-vindo ao site do Grupo de cultura popular Massapê. Aqui você encontrará informações sobre nosso trabalho, eventos e muito mais.</p>
     
     
     <div class="menu">
         <a class="menu-btn" href="historico.html">
-            <video src="videos/historico.mp4" autoplay loop muted playsinline></video>
+            <video src="videos/video4.mp4" autoplay loop muted playsinline></video>
             <span>Fundação e Histórico</span>
         </a>
         <button class="menu-btn" onclick="window.location.href='fotos.html'">
-            <video src="videos/fotos.mp4" autoplay loop muted playsinline></video>
+            <video src="videos/video3.mp4" autoplay loop muted playsinline></video>
             <span>Fotos</span>
         </button>
         <button class="menu-btn" onclick="window.location.href='musicas.html'">
-            <video src="videos/musicas.mp4" autoplay loop muted playsinline></video>
+            <video src="videos/video2.mp4" autoplay loop muted playsinline></video>
             <span>Músicas</span>
         </button>
         <button class="menu-btn" onclick="window.location.href='videos.html'">
-            <video src="videos/videos.mp4" autoplay loop muted playsinline></video>
+            <video src="videos/video1.mp4" autoplay loop muted playsinline></video>
             <span>Vídeos</span>
         </button>
     </div>
@@ -62,8 +62,22 @@
             </a>
         </div>
         <div style="text-align:center; color:#145a32; margin-top:18px; font-size:1rem; font-weight:600;">
-            © 2025 Grupo de cultura popular Massapê. Todos os direitos reservados.
+            © 2025 Grupo de Cultura Popular Massapê. Todos os direitos reservados.
         </div>
     </footer>
+
+    <script>
+    const titulo = document.getElementById('titulo-animado');
+    const texto = titulo.textContent;
+    titulo.textContent = '';
+    [...texto].forEach((letra, i) => {
+        const span = document.createElement('span');
+        span.textContent = letra;
+        titulo.appendChild(span);
+        setTimeout(() => {
+            span.classList.add('visible');
+        }, 60 * i);
+    });
+    </script>
 </body>
 </html>

@@ -139,7 +139,22 @@ h1 {
     font-weight: bold;
     margin: 32px 0 18px 0;
     text-align: center;
-    /* Removido text-shadow para não ter sombra */
+    word-spacing: 0.5em; /* Aumenta o espaço entre as palavras */
+    transition: word-spacing 0.5s;
+}
+.titulo-animado:hover {
+    word-spacing: 0.1em; /* (Opcional) aumenta ainda mais ao passar o mouse */
+}
+
+.titulo-animado span {
+    opacity: 0;
+    display: inline-block;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+.titulo-animado span.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes brilho-titulo {
