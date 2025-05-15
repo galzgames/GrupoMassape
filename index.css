@@ -116,9 +116,16 @@ h1 {
     text-decoration: none;
 }
 
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 32px; /* aumente o valor conforme desejar */
+    align-items: center;
+}
+
 .footer-social a img {
-    width: 40px;
-    height: 40px;
+    width: 64px;
+    height: 64px;
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.10);
