@@ -67,6 +67,19 @@
         .carousel-dot.active {
             background: #229954;
         }
+        .img-watermark {
+            position: relative;
+            display: inline-block;
+        }
+        .watermark-text {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -974,6 +987,44 @@
                 img.addEventListener('mousedown', function(e) {
                     e.preventDefault();
                 });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.carousel-slide img').forEach(function(img) {
+                // Cria o container
+                var wrapper = document.createElement('div');
+                wrapper.className = 'img-watermark';
+                wrapper.style.position = 'relative';
+                wrapper.style.display = 'inline-block';
+
+                // Cria o texto da marca d'água
+                var watermark = document.createElement('span');
+                watermark.className = 'watermark-text';
+                watermark.textContent = 'Massapê';
+
+                // Cria a logo do grupo (ajuste o caminho conforme necessário)
+                var logo = document.createElement('img');
+                logo.src = 'logos/logo-massape.jpg'; // coloque o caminho correto da sua logo
+                logo.alt = 'Logo Massapê';
+                logo.className = 'logo-watermark';
+
+                // Estiliza a logo via JS (ou use CSS)
+                logo.style.position = 'absolute';
+                logo.style.left = '10px';
+                logo.style.bottom = '10px';
+                logo.style.width = '48px';
+                logo.style.height = '48px';
+                logo.style.opacity = '0.7';
+                logo.style.pointerEvents = 'none';
+                logo.style.userSelect = 'none';
+
+                // Insere a imagem, logo e o texto no container
+                img.parentNode.insertBefore(wrapper, img);
+                wrapper.appendChild(img);
+                wrapper.appendChild(logo);
+                wrapper.appendChild(watermark);
             });
         });
     </script>
