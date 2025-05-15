@@ -961,10 +961,19 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('img').forEach(function(img) {
+                // Bloqueia menu de contexto (desktop e alguns navegadores mobile)
                 img.addEventListener('contextmenu', function(e) {
                     e.preventDefault();
                 });
+                // Bloqueia arrastar
                 img.setAttribute('draggable', 'false');
+                // Bloqueia toque longo (Android/iOS)
+                img.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                }, {passive: false});
+                img.addEventListener('mousedown', function(e) {
+                    e.preventDefault();
+                });
             });
         });
     </script>
