@@ -6,11 +6,12 @@
 }
 
 body {
-    background: url('fotos/2011 a 2025/FOTOS DO MASSAPE DE 2011 A 2024 (29).jpg') no-repeat center center fixed;
+    background: url('fotos/2011%20a%202025/FOTOS%20DO%20MASSAPE%20DE%202011%20A%202024%20(29).jpg') no-repeat center center fixed;
     background-size: cover;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: #222;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -238,7 +239,7 @@ img[ondragstart="return false;"] {
 }
 
 /* Fundo do slide */
-.bg-slideshow {
+/* .bg-slideshow {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: -1;
@@ -259,7 +260,7 @@ img[ondragstart="return false;"] {
 
 .bg-slideshow img.active {
     opacity: 1;
-}
+} */
 
 .apresentacao {
     color: #111;
